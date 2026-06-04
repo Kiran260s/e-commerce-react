@@ -8,8 +8,9 @@ const Cart = () => {
   const { cart, removeFromCart, increaseQuantity, decreaseQuantity } = useContext(DataContext)
 
   const totalPrice = cart.reduce((total, item) => {
-    return total + item.price
+    return total + item.price * item.quantity
   }, 0)
+  
   return (
     <section className='max-w-7xl mx-auto px-6 py-10'>
       <h1 className='text-white text-4xl font-boldmb-10 text-center'>Cart Page</h1>
