@@ -56,6 +56,7 @@ const CartProvider = ({children}) => {
 
     function decreaseQuantity(id){
         const existingItem = cart.find((item) => item.id === id)
+        
         if(existingItem.quantity === 1){
             removeFromCart(id)
             return
